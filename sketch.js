@@ -41,7 +41,7 @@ function draw() {
    if (gameState === 1) {
      clear(); 
      game.play();
-     if(player.score === 100){
+     if(player.score === 101){
        gameState = 2;
      }
    }

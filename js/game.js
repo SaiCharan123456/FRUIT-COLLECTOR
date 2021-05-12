@@ -45,6 +45,7 @@ class Game{
                  var y=200;
                  var index =0;
                  drawSprites();
+                 var displayY = 50
                  for(var plr in allPlayers){
                     
                     
@@ -61,14 +62,14 @@ class Game{
                          text(allPlayers[plr].name,x-50,y+25);
                          
                        //add code to display the player's name on the respective basket.
-                       y = 50
-                       y = y + 30;
-                       fill("yellow");
-                       text( allPlayers[plr].name+":"+allPlayers[plr].score,50,y);
-                       text( allPlayers[plr].name+":"+allPlayers[plr].score,50,80) ;
+                       
                      }
-                    
-                      
+                     
+                       displayY = displayY + 50;
+                       fill("yellow");
+                       textSize(20);
+                       text( allPlayers[plr].name+":"+allPlayers[plr].score,50,displayY) ;
+                      //text( allPlayers[plr].name+":"+allPlayers.player2.score,50,displayY) ;
                  
                  }
                 
@@ -109,8 +110,7 @@ class Game{
                         if (fruitGroup.get(i).isTouching(players)) {
                             fruitGroup.get(i).destroy();
                          player.score = player.score + 1;
-                            
-                        }
+                            }
                         
                     }
                   }
